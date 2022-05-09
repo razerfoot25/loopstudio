@@ -1,7 +1,37 @@
 @use "./fonts" as *;
-
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
 @each $tag, $value in $size {
   #{$tag} {
     font-size: $value;
   }
+}
+
+body {
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+h1,
+h2,
+h3,
+a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: var(--fw-accent-300);
+
+  line-height: 1;
+}
+
+p,
+small,
+button {
+  font-family: "Alata", sans-serif;
+  font-weight: var(--fw-accent-400);
+}
+p {
+  line-height: 1.7;
 }

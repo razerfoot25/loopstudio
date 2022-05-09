@@ -20,10 +20,9 @@
 
 :root {
   --grid-column: 6;
+  --max-container-width: 75rem;
   --grid-gap: 1em;
-  --spacer-mobile: 1rem;
-  --spacer-desktop: 1fr;
-
+  --flex-gap: 1.5em;
   --spacer-margin: 2em;
 
   --paddingx-xs: 0.25em;
@@ -31,6 +30,12 @@
   --paddingx-md: 1em;
   --paddingx-lg: 2em;
   --paddingx-xl: 4em;
+  --paddingy-xs: 0.25em;
+  --paddingy-sm: 0.5em;
+  --paddingy-md: 1em;
+  --paddingy-lg: 2em;
+  --paddingy-xl: 4em;
+  --paddingy-2xl: 8em;
 
   @each $base, $shade in $colors {
     @each $shades, $colors in $shade {

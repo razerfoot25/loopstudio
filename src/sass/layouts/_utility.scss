@@ -9,13 +9,14 @@
 .grid-container {
   display: grid;
   grid-template-columns:
-    var(--spacer-mobile) repeat(var(--grid-column), Minmax(3rem, 15rem))
-    var(--spacer-mobile);
+    Minmax(1.5rem, 1fr) repeat(
+      var(--grid-column),
+      Minmax(0, Calc(var(--max-container-width) / var(--grid-column)))
+    )
+    Minmax(1rem, 1fr);
 
-  @include breakpoint(large) {
-    grid-template-columns:
-      var(--spacer-desktop) repeat(var(--grid-column), Minmax(3rem, 15rem))
-      var(--spacer-desktop);
+  > * {
+    grid-column: 2 / span var(--grid-column);
   }
 }
 
@@ -53,17 +54,24 @@
   gap: var(--grid-gap);
 }
 
-.flex-col {
+.grid {
+  display: grid;
+}
+
+.flex {
   display: flex;
+}
+.flex-col {
   flex-direction: column;
+  gap: var(--flex-gap);
   @include breakpoint(large) {
     flex-direction: row;
   }
 }
 
 .flex-row {
-  display: flex;
   flex-direction: column;
+  gap: var(--flex-gap);
 }
 
 .justify-start {
@@ -107,4 +115,24 @@
 }
 .px-xl {
   padding-inline: var(--paddingx-xl);
+}
+
+.py-xs {
+  padding-block: var(--paddingy-xs);
+}
+.py-sm {
+  padding-block: var(--paddingy-sm);
+}
+.py-md {
+  padding-block: var(--paddingy-md);
+}
+.py-lg {
+  padding-block: calc(var(--paddingy-lg) * 1.5);
+}
+.py-xl {
+  padding-block: var(--paddingy-xl);
+}
+
+.py-2xl {
+  padding-block: var(--paddingy-2xl);
 }

@@ -1,1 +1,40 @@
-// nav layouts
+@use "../abstracts/breakpoints" as *;
+.nav {
+  &__menu-logo,
+  &__menu-icon {
+    z-index: 1;
+  }
+
+  &__menu-container {
+    position: absolute;
+    background-color: var(--clr-primary-700);
+    inset: 0 0 0 0;
+
+    transform: translateX(100%);
+    transition: transform 500ms ease-out;
+
+    &--items {
+      color: var(--clr-primary-400);
+    }
+  }
+
+  &__open {
+    content: url("../images/icon-close.svg");
+  }
+
+  @include breakpoint(large) {
+    &__menu-icon {
+      display: none;
+    }
+    &__menu-container {
+      background-color: transparent;
+      transform: unset;
+      position: relative;
+      inset: unset;
+    }
+  }
+}
+
+.menu-open {
+  transform: translateX(0px);
+}
