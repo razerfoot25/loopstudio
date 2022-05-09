@@ -1,0 +1,110 @@
+@use "../abstracts/breakpoints" as *;
+
+.spacer {
+  > * + * {
+    margin-top: var(--spacer-margin);
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns:
+    var(--spacer-mobile) repeat(var(--grid-column), Minmax(3rem, 15rem))
+    var(--spacer-mobile);
+
+  @include breakpoint(large) {
+    grid-template-columns:
+      var(--spacer-desktop) repeat(var(--grid-column), Minmax(3rem, 15rem))
+      var(--spacer-desktop);
+  }
+}
+
+.grid-col-2 {
+  grid-column: 2 / span var(--grid-column);
+  display: grid;
+  grid-auto-flow: row;
+  gap: var(--grid-gap);
+  @include breakpoint(large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-col-3 {
+  grid-column: 2 / span var(--grid-column);
+  display: grid;
+  grid-auto-flow: row;
+  gap: var(--grid-gap);
+  @include breakpoint(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-col-4 {
+  grid-column: 2 / span var(--grid-column);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, Minmax(10rem, 1fr));
+  gap: var(--grid-gap);
+}
+
+.grid-col-auto {
+  grid-column: 2 / span var(--grid-column);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, Minmax(20rem, 1fr));
+  gap: var(--grid-gap);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-start {
+  justify-items: start;
+}
+
+.justify-center {
+  justify-items: center;
+}
+
+.justify-end {
+  justify-items: end;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+.px-xs {
+  padding-inline: var(--paddingx-xs);
+}
+.px-sm {
+  padding-inline: var(--paddingx-sm);
+}
+.px-md {
+  padding-inline: var(--paddingx-md);
+}
+.px-lg {
+  padding-inline: var(--paddingx-lg);
+}
+.px-xl {
+  padding-inline: var(--paddingx-xl);
+}

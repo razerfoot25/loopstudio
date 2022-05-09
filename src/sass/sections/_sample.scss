@@ -1,0 +1,13 @@
+@use "../components/buttons" as *;
+
+.section1 {
+  background-color: lightgrey;
+}
+
+.section2 {
+  background-color: lightslategrey;
+
+  button {
+    @include btn-red;
+  }
+}

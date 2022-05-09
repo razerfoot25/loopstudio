@@ -1,0 +1,27 @@
+%btn {
+  padding: 0.75em 1.25em;
+  border-radius: 0.5rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+@mixin btn-red {
+  @extend %btn;
+  background-color: red;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: red;
+    outline: 2px solid red;
+  }
+}
+
+@mixin btn-outline {
+  @extend %btn;
+
+  background-color: white;
+  color: black;
+  outline: 2px solid black;
+}
