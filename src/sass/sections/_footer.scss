@@ -1,0 +1,77 @@
+@use "../abstracts/breakpoints" as *;
+.footer {
+  background-color: var(--clr-primary-700);
+  color: var(--clr-primary-400);
+
+  &__nav {
+    @include breakpoint(large) {
+      align-items: flex-start;
+    }
+    ul {
+      li {
+        position: relative;
+        a {
+          color: inherit;
+          &:hover {
+            &::before {
+              content: "";
+              position: absolute;
+              inset: auto 0.5em -0.5em 0.5em;
+              border: 2px solid var(--clr-primary-400);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__socmed {
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+      li {
+        position: relative;
+        background-color: var(--clr-primary-400);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+
+        &:hover {
+          &::before {
+            content: "";
+            position: absolute;
+            inset: auto 0.5em -0.5em 0.5em;
+            border: 2px solid red;
+          }
+        }
+
+        &:nth-child(1) {
+          mask-image: url("../images/icon-facebook.svg");
+        }
+        &:nth-child(2) {
+          mask-image: url("../images/icon-twitter.svg");
+          //
+        }
+        &:nth-child(3) {
+          mask-image: url("../images/icon-pinterest.svg");
+        }
+        &:nth-child(4) {
+          mask-image: url("../images/icon-instagram.svg");
+        }
+      }
+    }
+    small {
+      color: var(--clr-primary-500);
+      text-align: center;
+    }
+    align-items: flex-end;
+    div {
+      text-align: center;
+      @include breakpoint(large) {
+        padding-block: var(--padding-md);
+      }
+    }
+  }
+}

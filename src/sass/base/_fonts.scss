@@ -1,12 +1,12 @@
 $size: (
-  h1: Clamp(1rem, 6.5vw + 1rem, 5rem),
-  h2: Clamp(3rem, 10vw + 1rem, 3rem),
-  h3: Clamp(3rem, 10vw + 1rem, 3rem),
-  p: Clamp(1.5rem, 1vw + 1rem, 1.5rem),
+  h1: Clamp(2.5rem, 5vw + 1rem, 5rem),
+  h2: Clamp(0.75rem, 4vw + 1rem, 3.5rem),
+  h3: Clamp(2rem, 4vw + 1rem, 3rem),
+  p: Clamp(0.75rem, 5vw + 1rem, 1rem),
   a: Clamp(1rem, 10vw + 1rem, 1.25rem),
-  button: Clamp(1.25rem, 10vw + 1rem, 1.25rem),
-  strong: Clamp(2.25rem, 10vw + 1rem, 2.25rem),
-  small: Clamp(1.5rem, 10vw + 1rem, 1.5rem),
+  button: Clamp(1rem, 5vw + 1rem, 1rem),
+  strong: Clamp(1rem, 5vw + 1rem, 1.75rem),
+  small: Clamp(0.75rem, 5vw + 1rem, 1rem),
   // small: (
   //   h1: 2.5rem,
   //   h2: 2rem,
@@ -22,7 +22,7 @@ $size: (
   //   h4: 2rem,
   //   p: 1.5rem,
   //   a: 1rem,
-  // ),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  // ),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 $weight: (

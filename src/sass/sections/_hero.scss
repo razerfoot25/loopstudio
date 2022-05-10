@@ -11,7 +11,9 @@
 
   section {
     min-height: 70vh;
-    max-width: 60%;
+    @include breakpoint(large) {
+      max-width: 60%;
+    }
   }
   &__header {
     outline: 2px solid var(--clr-primary-400);

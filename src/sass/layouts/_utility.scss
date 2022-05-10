@@ -9,7 +9,7 @@
 .grid-container {
   display: grid;
   grid-template-columns:
-    Minmax(1.5rem, 1fr) repeat(
+    Minmax(1rem, 1fr) repeat(
       var(--grid-column),
       Minmax(0, Calc(var(--max-container-width) / var(--grid-column)))
     )
@@ -41,10 +41,30 @@
 }
 
 .grid-col-4 {
+  // grid-column: 2 / span var(--grid-column);
+  grid-column: 2 / 8;
+  display: grid;
+  grid-auto-flow: row;
+  gap: var(--grid-gap);
+  @include breakpoint(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.grid-col-4-auto {
   grid-column: 2 / span var(--grid-column);
   display: grid;
   grid-template-columns: repeat(auto-fit, Minmax(10rem, 1fr));
   gap: var(--grid-gap);
+}
+
+.grid-col-6 {
+  grid-column: 2 / span var(--grid-column);
+  display: grid;
+  grid-auto-flow: row;
+  @include breakpoint(large) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .grid-col-auto {
@@ -86,8 +106,10 @@
   justify-items: end;
 }
 
-.justify-space-between {
-  justify-content: space-between;
+@include breakpoint(large) {
+  .justify-space-between {
+    justify-content: space-between;
+  }
 }
 
 .align-start {
@@ -101,38 +123,49 @@
   align-items: end;
 }
 
+.align-self-start {
+  align-self: flex-start;
+}
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
 .px-xs {
-  padding-inline: var(--paddingx-xs);
+  padding-inline: var(--padding-xs);
 }
 .px-sm {
-  padding-inline: var(--paddingx-sm);
+  padding-inline: var(--padding-sm);
 }
 .px-md {
-  padding-inline: var(--paddingx-md);
+  padding-inline: var(--padding-md);
 }
 .px-lg {
-  padding-inline: var(--paddingx-lg);
+  padding-inline: var(--padding-lg);
 }
 .px-xl {
-  padding-inline: var(--paddingx-xl);
+  padding-inline: var(--padding-xl);
 }
 
 .py-xs {
-  padding-block: var(--paddingy-xs);
+  padding-block: var(--padding-xs);
 }
 .py-sm {
-  padding-block: var(--paddingy-sm);
+  padding-block: var(--padding-sm);
 }
 .py-md {
-  padding-block: var(--paddingy-md);
+  padding-block: var(--padding-md);
 }
 .py-lg {
-  padding-block: calc(var(--paddingy-lg) * 1.5);
+  padding-block: var(--padding-lg);
 }
 .py-xl {
-  padding-block: var(--paddingy-xl);
+  padding-block: var(--padding-xl);
 }
 
 .py-2xl {
-  padding-block: var(--paddingy-2xl);
+  padding-block: var(--padding-2xl);
 }

@@ -43,13 +43,13 @@
       </section>
     </div>
 
-    <main>
-      <section class="about">
+    <main class="grid-container">
+      <section class="about py-xl grid-col-4">
         <div class="about__image-container">
           <img src="./" alt="" />
         </div>
-        <div class="about__textfield">
-          <h2>The leader in interactive VR</h2>
+        <div class="about__textfield px-lg">
+          <h2 class="py-sm">The leader in interactive VR</h2>
           <p>
             Founded in 2011, Loopstudios has been producing world-class virtual
             reality projects for some of the best companies around the globe.
@@ -59,42 +59,87 @@
         </div>
       </section>
 
-      <section class="products">
+      <section class="products py-xl flex flex-row">
         <div class="products__textfield">
           <h3>Our creations</h3>
-          <button>See all</button>
+          <button class="products__btn--desktop">See all</button>
         </div>
-        <div class="products__cards">
-          <div><strong>Deep earth</strong></div>
-          <div><strong>Night arcade</strong></div>
-          <div><strong>Soccer team VR</strong></div>
-          <div><strong>The grid</strong></div>
-          <div><strong>From up above VR</strong></div>
-          <div><strong>Pocket borealis</strong></div>
-          <div><strong>The curiosity</strong></div>
-          <div><strong>Make it fisheye</strong></div>
+        <div class="products__cards grid-col-4 py-lg">
+          <div class="grid align-end justify-start">
+            <strong class="px-sm py-sm"
+              >Deep <br />
+              earth</strong
+            >
+          </div>
+          <div class="grid align-end justify-start">
+            <strong class="px-sm py-sm"
+              >Night<br />
+              arcade</strong
+            >
+          </div>
+          <div class="grid align-end justify-start">
+            <strong class="px-sm py-sm"
+              >Soccer<br />
+              team VR</strong
+            >
+          </div>
+          <div class="grid align-end justify-start">
+            <strong class="px-sm py-sm"
+              >The<br />
+              grid</strong
+            >
+          </div>
+          <div class="grid align-end justify-start">
+            <strong class="px-sm py-sm"
+              >From up<br />
+              above VR</strong
+            >
+          </div>
+          <div class="grid align-end justify-start">
+            <strong class="px-sm py-sm"
+              >Pocket<br />
+              borealis</strong
+            >
+          </div>
+          <div class="grid align-end justify-start">
+            <strong class="px-sm py-sm"
+              >The<br />
+              curiosity</strong
+            >
+          </div>
+          <div class="grid align-end justify-start">
+            <strong class="px-sm py-sm"
+              >Make it<br />
+              fisheye</strong
+            >
+          </div>
         </div>
+        <button class="products__btn--mobile align-self-center">See all</button>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__nav">
-        <img src="./images/logo.svg" alt="" />
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Careers</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">Support</a></li>
-        </ul>
-      </div>
-      <div class="footer__socmed">
-        <ul>
-          <li><a href="">fb</a></li>
-          <li><a href="">twi</a></li>
-          <li><a href="">pint</a></li>
-          <li><a href="">insta</a></li>
-        </ul>
-        <small>© 2021 Loopstudios. All rights reserved.</small>
+    <footer class="footer grid-container py-xl">
+      <div class="grid-col-2">
+        <div class="footer__nav flex flex-row align-center">
+          <img src="./images/logo.svg" alt="" />
+          <ul class="flex flex-col py-md">
+            <li><a href="">About</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer__socmed flex flex-row">
+          <ul>
+            <li><a aria-label="facebook" href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+          <div>
+            <small>© 2021 Loopstudios. All rights reserved.</small>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="js/index.js"></script>

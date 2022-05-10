@@ -21,21 +21,16 @@
 :root {
   --grid-column: 6;
   --max-container-width: 75rem;
-  --grid-gap: 1em;
+  --grid-gap: 1.25em;
   --flex-gap: 1.5em;
   --spacer-margin: 2em;
 
-  --paddingx-xs: 0.25em;
-  --paddingx-sm: 0.5em;
-  --paddingx-md: 1em;
-  --paddingx-lg: 2em;
-  --paddingx-xl: 4em;
-  --paddingy-xs: 0.25em;
-  --paddingy-sm: 0.5em;
-  --paddingy-md: 1em;
-  --paddingy-lg: 2em;
-  --paddingy-xl: 4em;
-  --paddingy-2xl: 8em;
+  --padding-xs: 0.25em;
+  --padding-sm: calc(0.5rem + 2vw);
+  --padding-md: calc(1em + 1vw);
+  --padding-lg: calc(2rem + 2vw);
+  --padding-xl: calc(4em + 2vw);
+  --padding-2xl: 8em;
 
   @each $base, $shade in $colors {
     @each $shades, $colors in $shade {
