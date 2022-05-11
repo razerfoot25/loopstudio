@@ -12,11 +12,16 @@
         position: relative;
         a {
           color: inherit;
+
+          &::before {
+            content: "";
+            position: absolute;
+            inset: auto 50% -0.75rem 50%;
+            transition: transform 500ms ease-out;
+          }
           &:hover {
             &::before {
-              content: "";
-              position: absolute;
-              inset: auto 0.5em -0.5em 0.5em;
+              transform: scaleX(7);
               border: 2px solid var(--clr-primary-400);
             }
           }
@@ -30,35 +35,44 @@
       display: flex;
       justify-content: center;
       gap: 1.5em;
+      // li {
+      //   position: relative;
+      //   background-color: var(--clr-primary-400);
+      //   mask-size: contain;
+      //   mask-repeat: no-repeat;
+      //   width: 30px;
+      //   height: 30px;
+
+      //   &:nth-child(1) {
+      //     mask-image: url("../images/icon-facebook.svg");
+      //   }
+      //   &:nth-child(2) {
+      //     mask-image: url("../images/icon-twitter.svg");
+      //   }
+      //   &:nth-child(3) {
+      //     mask-image: url("../images/icon-pinterest.svg");
+      //   }
+      //   &:nth-child(4) {
+      //     mask-image: url("../images/icon-instagram.svg");
+      //   }
+      // }
+
       li {
         position: relative;
-        background-color: var(--clr-primary-400);
-        mask-size: contain;
-        mask-repeat: no-repeat;
-        width: 30px;
-        height: 30px;
-
-        &:hover {
+        a {
           &::before {
             content: "";
             position: absolute;
-            inset: auto 0.5em -0.5em 0.5em;
-            border: 2px solid red;
-          }
-        }
+            inset: auto 0.5em -0.75em 0.5em;
 
-        &:nth-child(1) {
-          mask-image: url("../images/icon-facebook.svg");
-        }
-        &:nth-child(2) {
-          mask-image: url("../images/icon-twitter.svg");
-          //
-        }
-        &:nth-child(3) {
-          mask-image: url("../images/icon-pinterest.svg");
-        }
-        &:nth-child(4) {
-          mask-image: url("../images/icon-instagram.svg");
+            transition: transform 500ms ease-out;
+          }
+          &:hover {
+            &::before {
+              transform: scaleX(6);
+              border: 2px solid var(--clr-primary-400);
+            }
+          }
         }
       }
     }

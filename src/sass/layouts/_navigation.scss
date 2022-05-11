@@ -1,5 +1,9 @@
 @use "../abstracts/breakpoints" as *;
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   &__menu-logo,
   &__menu-icon {
     z-index: 1;
@@ -12,9 +16,24 @@
 
     transform: translateX(100%);
     transition: transform 500ms ease-out;
-
+    li {
+      position: relative;
+    }
     &--items {
       color: var(--clr-primary-400);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: auto 50% -0.5em 50%;
+        transition: transform 500ms ease-out;
+      }
+      &:hover {
+        &::before {
+          transform: scaleX(6);
+          border: 2px solid var(--clr-primary-400);
+        }
+      }
     }
   }
 

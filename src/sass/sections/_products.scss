@@ -37,7 +37,9 @@
       color: var(--clr-primary-400);
       min-height: 8.5rem;
       cursor: pointer;
+
       &:hover {
+        color: var(--clr-primary-700);
         &::before {
           content: "";
           background-image: linear-gradient(
@@ -46,15 +48,15 @@
           );
           position: absolute;
           inset: 0 0 0 0;
-          opacity: 0.6;
+          opacity: 0.5;
         }
       }
       &::before {
         content: "";
-        background-image: linear-gradient(transparent, var(--clr-primary-700));
+        background-image: linear-gradient(transparent, var(--clr-primary-650));
         position: absolute;
         inset: 0 0 0 0;
-        opacity: 0.5;
+        transition: opacity 500ms ease-out;
       }
 
       strong {
